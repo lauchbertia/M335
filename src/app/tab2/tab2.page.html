@@ -13,5 +13,17 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-button (click)="logDeviceInfos()">Log Device Infos</ion-button>
+  <div *ngIf="deviceInfo">
+    <p>Modell: {{ deviceInfo.model }}</p>
+    <p>Plattform: {{ deviceInfo.platform }}</p>
+  </div>
+  <ion-button (click)="logBatteryInfo()">Log Battery Info</ion-button>
+  <div *ngIf="batteryInfo">
+   <p>Batteriestatus: {{ batteryInfo.batteryLevel}}</p>
+    <p>Ladestatus: {{ batteryInfo.isCharging }}</p>
+  </div>
+  <ion-button (click)="logDeviceInfo()">Log Device Info</ion-button>
+
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
